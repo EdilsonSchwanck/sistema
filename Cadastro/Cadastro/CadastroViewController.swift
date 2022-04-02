@@ -13,31 +13,26 @@ import FirebaseDatabase
 class CadastroViewController: UIViewController {
     
     @IBOutlet weak var email: UITextField!
-    
     @IBOutlet weak var userrs: UITextField!
-    
-    
     @IBOutlet weak var senha: UITextField!
     @IBOutlet weak var senhaConfirmacao: UITextField!
    
-    
-    
-    //o salvar vai ter que ser dentro do botao 
     @IBAction func CriarConta(_ sender: Any) {
         
         
         if let emailR = self.email.text{
-            if let nomecompletoR = self.userrs.text{
+            if let userrsR = self.userrs.text{
                 if let senhaR = self.senha.text{
                     if let senhaConfirmacaoR = self.senhaConfirmacao.text{
                         
                         if senhaR == senhaConfirmacaoR{
                             
                             //validação de nome
-                            if nomecompletoR != ""{
+                            if userrsR != ""{
                                 
                                 let autenticacao  = Auth.auth()
                                 autenticacao.createUser(withEmail: emailR, password: senhaR) { usuario, erro in
+                                    
                                     
                                     if erro == nil{
                                         
@@ -54,7 +49,7 @@ class CadastroViewController: UIViewController {
                                             
                                             
                                             
-                                            let usuarioDados = ["usuario": nomecompletoR, "email": emailR]
+                                            let usuarioDados = ["usuario": userrsR, "email": emailR]
                                             let _: Void = usurios.child(usuario!.user.uid).setValue(usuarioDados)
                                             
                                             //let usuarioFile = usurios.child(usuario!.user.uid).setValue(usuarioDados)
@@ -126,15 +121,5 @@ class CadastroViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

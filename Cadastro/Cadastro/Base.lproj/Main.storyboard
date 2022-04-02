@@ -344,15 +344,10 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7WV-ZN-S8r">
                                 <rect key="frame" x="10" y="240" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JfT-iH-4xR">
                                 <rect key="frame" x="10" y="317" width="394" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jpT-bU-1fO">
-                                <rect key="frame" x="10" y="394" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -365,9 +360,14 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Salvar"/>
                                 <connections>
-                                    <action selector="salvar:" destination="hMx-m8-D2v" eventType="touchUpInside" id="Fcz-Vz-GFV"/>
+                                    <action selector="salvar:" destination="hMx-m8-D2v" eventType="touchUpInside" id="Zjx-Yt-DqT"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jpT-bU-1fO">
+                                <rect key="frame" x="10" y="394" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Bw-NL-tts"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -410,6 +410,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="codigo" destination="oWL-Ss-clg" id="bBG-vL-TmF"/>
+                        <outlet property="cpf" destination="7WV-ZN-S8r" id="P5h-h8-mwA"/>
+                        <outlet property="endereco" destination="JfT-iH-4xR" id="OIE-iq-TRh"/>
+                        <outlet property="nome" destination="nHx-H6-4og" id="wTe-Py-McB"/>
+                        <outlet property="telefone" destination="jpT-bU-1fO" id="ni5-TH-6tN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEG-qk-fZw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
