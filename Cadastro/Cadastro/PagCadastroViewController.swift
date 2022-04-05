@@ -38,11 +38,11 @@ class PagCadastroViewController: UIViewController {
        
         guard let codigoR = codigo.text else { return }
         guard let nomeR = nome.text, !nomeR.isEmpty else{
-            let alerta = Alerta(titulo: "Error", mensagem: "Campo nome não pode estar em branco")
+            let alerta = Alerta(titulo: "Aviso", mensagem: "Campo nome não pode estar em branco")
             self.present(alerta.getAlerta(), animated: true, completion: nil)
             return }
         guard let cpfR = cpf.text, !cpfR.isEmpty else {
-            let alerta = Alerta(titulo: "Error", mensagem: "campo CPF esta em branco")
+            let alerta = Alerta(titulo: "Aviso", mensagem: "campo CPF esta em branco")
             self.present(alerta.getAlerta(), animated: true, completion: nil)
             return
             
